@@ -1,0 +1,22 @@
+<header class="section__header">
+  <div>
+    <h1 hlmH1>{{ scrumBoardTitle() }}</h1>
+    <h2 class="font-semibold">{{ store.boards().length }} Boards</h2>
+  </div>
+  <div class="flex items-center gap-2 mt-4 sm:mt-0">
+    <button hlmBtn routerLink=".." variant="secondary">
+      <hlm-icon class="mr-1" size="sm" name="lucideArrowLeft" />Back
+    </button>
+  </div>
+</header>
+
+<div class="flex-auto p-6 sm:p-8 sm:pt-4 overflow-y-auto">
+  <div class="flex h-full">
+    <div cdkDropListGroup class="flex items-start gap-3">
+      @for(board of store.boards(); track board.id){
+      <app-board [board]="board"></app-board>
+      }
+      <app-board-creator [scrumBoardId]="scrumBoardId"></app-board-creator>
+    </div>
+  </div>
+</div>

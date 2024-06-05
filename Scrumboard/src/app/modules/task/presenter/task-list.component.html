@@ -1,0 +1,17 @@
+<div
+  class="h-full p-3"
+  [id]="boardId()"
+  cdkDropList
+  [cdkDropListData]="store.get(boardId())"
+  (cdkDropListDropped)="dropped($event)"
+>
+  @for(task of store.get(boardId()); track task.boardId){
+  <div cdkDrag>
+    <app-task [task]="task"></app-task>
+  </div>
+  }
+
+  <footer class="w-full absolute left-0 bottom-0">
+    <app-task-creator [boardId]="boardId()"></app-task-creator>
+  </footer>
+</div>

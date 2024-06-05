@@ -1,0 +1,34 @@
+<div class="overflow-x-auto w-full max-w-screen-sm">
+  <table class="table bg-base-200">
+    <thead>
+      <tr class="text-center border-b border-neutral">
+        <th>Date</th>
+        <th>Humidity</th>
+        <th>Description</th>
+        <th>Min Temp</th>
+        <th>Max Temp</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(forecast of weatherService.weather().getForecast() ; track
+      forecast.getDate()){
+      <tr class="text-center">
+        <td>
+          <span class="font-semibold">{{
+            forecast.getDate() | date : "EEEE"
+          }}</span>
+        </td>
+        <td>
+          <div class="flex items-center justify-center">
+            <span class="font-semibold">{{ forecast.getHumidity() }} %</span>
+            <i class="bx bx-droplet ml-1 text-2xl"></i>
+          </div>
+        </td>
+        <td>{{ forecast.getDescription() }}</td>
+        <td>{{ forecast.getTempMin() }} °C</td>
+        <td>{{ forecast.getTempMax() }} °C</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

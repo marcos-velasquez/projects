@@ -1,0 +1,23 @@
+{
+  "cSpell.words": [
+    "alertdialog",
+    "bluegrey",
+    "clsx",
+    "devkit",
+    "esnext",
+    "localstorage",
+    "lucide",
+    "matx",
+    "scrumboard",
+    "scrumboards",
+    "tailwindcss",
+    "usecase",
+    "uuidv"
+  ],
+  "angular-schematics.schematicsDefaultOptions": {
+    "angular-*": {
+      "style": "scss",
+      "externalTemplate": true
+    }
+  }
+}

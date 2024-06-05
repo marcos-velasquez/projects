@@ -1,0 +1,9 @@
+<div class="w-full">
+  <i class="bx bxs-cloud text-6xl"></i>
+  <ui-autocomplete
+    placeholder="Enter Location"
+    (search)="locationService.setLocations($event)"
+    (selectedChange)="locationStore.setLocation($event.location)"
+    [items]="locationService.locationList().locations"
+  ></ui-autocomplete>
+</div>
