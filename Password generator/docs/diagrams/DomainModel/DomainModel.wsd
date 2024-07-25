@@ -1,0 +1,21 @@
+@startuml Password Generator
+
+class Password {}
+
+class Config {}
+
+class Length {}
+
+class Uppercase {}
+
+class Number {}
+
+class Symbol {}
+
+Password --> Config
+Config -- Length : "8 - 16"
+Config -- Uppercase : "0..*"
+Config -- Number : "0..*"
+Config -- Symbol : "0..*"
+
+@enduml
