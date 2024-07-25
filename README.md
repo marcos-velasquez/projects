@@ -1,1 +1,1 @@
-# challenge-exercises
+# challenge-projects
