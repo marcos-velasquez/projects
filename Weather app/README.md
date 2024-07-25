@@ -1,27 +1,23 @@
-# WeatherApp
+# Aplicación de Clima con Angular 17
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
+**Aplicación web** que permite consultar el clima actual y las previsiones para los próximos días. Construida con Angular 17, Tailwind CSS y DaisyUI, ofreciendo una interfaz de usuario moderna y fácil de usar.
 
-## Development server
+### Características principales
+* Consulta del clima actual.
+* Búsqueda de ciudades por nombre.
+* Interfaz de usuario intuitiva y responsiva.
+* Diseño personalizado con Tailwind CSS y componentes preconstruidos de DaisyUI.
+* Gestión del estado con Signals y Effects.
+* Arquitectura Vertical Slice para una mejor escalabilidad.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Tecnologías utilizadas
+* **Angular 17:** Framework principal para la construcción de la aplicación.
+* **Tailwind CSS:** Framework CSS para el diseño personalizado.
+* **DaisyUI:** Biblioteca de componentes UI preconstruidos.
+* **Signals y Effects:** Para gestionar el estado y los efectos secundarios.
+* **Standalone components:** Para crear componentes independientes.
+* **Vertical Slice Architecture:** Para una arquitectura escalable.
 
-## Code scaffolding
+### Demo
+[https://weather-app123451.netlify.app/](https://weather-app123451.netlify.app/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
