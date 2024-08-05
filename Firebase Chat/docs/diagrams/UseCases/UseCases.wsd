@@ -1,0 +1,9 @@
+@startuml Firebase Chat
+left to right direction
+
+actor User 
+
+User --> (Login with google account)
+User --> (SendMessage)
+User --> (Logout)
+@enduml

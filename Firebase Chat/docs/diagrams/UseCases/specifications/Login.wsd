@@ -1,0 +1,25 @@
+@startuml Login
+
+[*] --> RequestLogin
+
+state RequestLogin {
+    [*] --> WaitingForCredentials : User requests to login with google
+
+    state Login {
+        [*] --> RequiresCredentials : System requires google credentials
+        RequiresCredentials --> EnterCredentials : User provides google credentials
+        EnterCredentials --> [*]
+        EnterCredentials --> RequiresCredentials : [invalid credentials]
+    }
+    
+    WaitingForCredentials --> Login
+    Login --> [*] : :openChat
+}
+
+RequestLogin --> ChatOpened : :openChat
+
+state ChatOpened {
+    [*] --> ChatOpened
+}
+
+@enduml

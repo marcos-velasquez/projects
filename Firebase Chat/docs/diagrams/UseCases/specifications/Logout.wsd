@@ -1,0 +1,8 @@
+@startuml Logout
+
+[*] --> Logout
+
+Logout --> Login : User requests to logout
+
+
+@enduml

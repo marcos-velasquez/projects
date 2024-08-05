@@ -1,0 +1,12 @@
+@startuml Firebase Chat
+    
+    class Room {}
+
+    class Message {}
+
+    class User {}
+
+    Room o-- User : 0..n
+    User o-- Message : 0..n
+
+@enduml

@@ -1,0 +1,17 @@
+@startuml SendMessage
+
+
+[*] --> OPENED_CHAT : User requests to write a message
+
+state WriteMessage {
+    [*] --> ReadyToWrite : System allows writing and request to send
+    ReadyToWrite --> WritingMessage : User writes a message and requests to send it
+    WritingMessage --> ShowMessage : sendMessage
+    ShowMessage --> [*]
+}
+
+OPENED_CHAT --> WriteMessage
+WriteMessage --> OPENED_CHAT : OpenChat
+
+
+@enduml

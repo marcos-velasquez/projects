@@ -1,0 +1,31 @@
+<div class="h-full container mx-auto absolute inset-0 grid grid-rows-[1fr_auto] overflow-hidden">
+  <div class="flex flex-col-reverse overflow-y-auto">
+    <div class="bg-card flex flex-auto shrink flex-col p-6 dark:bg-transparent">
+      @for ( message of store.messages(); track $index; let i = $index; let first = $first; let last = $last ) {
+      <app-start-of-the-day [message]="message" [previous]="store.previous(i)" [first]="first"></app-start-of-the-day>
+
+      @let isMine = message | isMine;
+      <div class="flex flex-col" [ngClass]="{ 'items-end': isMine, 'items-start': !isMine, 'mt-2': !first }">
+        <app-bubble [message]="message" [next]="store.next(i)" [last]="last"></app-bubble>
+        <app-time [message]="message" [next]="store.next(i)" [first]="first" [last]="last"></app-time>
+      </div>
+      }
+    </div>
+  </div>
+
+  <div class="flex items-center p-4">
+    <div class="w-full">
+      <textarea
+        cdkTextareaAutosize
+        (keydown.enter)="$event.preventDefault(); send()"
+        [formControl]="value"
+        class="w-full textarea textarea-primary resize-none max-h-64"
+      ></textarea>
+    </div>
+    <div class="my-px ml-4 flex h-11 items-center">
+      <button (click)="send()" [disabled]="value.invalid" class="hover:text-primary">
+        <span class="icon-[heroicons--paper-airplane] text-2xl"></span>
+      </button>
+    </div>
+  </div>
+</div>
