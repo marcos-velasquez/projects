@@ -31,3 +31,8 @@
 #### Resume
 
 ![ResumeUseCase](out/docs//UseCase//specifications/resume/Connect4.png)
+
+### Demo
+
+[https://connect4-1234.netlify.app/](https://connect4-1234.netlify.app/)
+
