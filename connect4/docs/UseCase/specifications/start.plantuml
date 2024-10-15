@@ -1,0 +1,11 @@
+@startuml Connect4
+state INITIAL
+state IN_GAME
+state 1 as " "
+
+INITIAL --> 1 : Jugador solicita arrancar el sistema
+1 --> IN_GAME : Sistema muestra la partida
+ 
+
+
+@enduml

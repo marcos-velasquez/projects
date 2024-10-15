@@ -1,0 +1,8 @@
+@startuml Connect4
+left to right direction
+
+:Player:
+Player --> (start)
+Player --> (putToken)
+Player --> (resume)
+@enduml

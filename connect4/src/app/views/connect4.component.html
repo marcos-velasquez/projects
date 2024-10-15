@@ -1,0 +1,9 @@
+<section class="h-screen w-screen bg-gray-900">
+  @if (connect4.isState.initial()) {
+  <app-start-view [connect4]="connect4"></app-start-view>
+  } @if (connect4.isState.inGame()) {
+  <app-game-view [connect4]="connect4"></app-game-view>
+  } @if (connect4.isState.gameOver()) {
+  <app-resume-view [connect4]="connect4"></app-resume-view>
+  }
+</section>

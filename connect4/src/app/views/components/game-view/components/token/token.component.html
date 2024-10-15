@@ -1,0 +1,8 @@
+<div
+  class="token"
+  [ngClass]="{
+    'bg-white': connect4().isBoard(row(), column()).none(),
+    'bg-red-500': connect4().isBoard(row(), column()).red(),
+    'bg-yellow-500': connect4().isBoard(row(), column()).yellow()
+  }"
+></div>

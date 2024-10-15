@@ -1,0 +1,26 @@
+@startuml Connect4
+
+    enum Color {
+        RED,
+        YELLOW
+    } 
+        
+    
+    Connect4 *-- "2" Player 
+    Connect4 *-- Board
+    Board o-- Square : 6x7
+    Square *-- "6" Row 
+    Square *-- "7" Column 
+    Connect4 *-- Turn 
+    Turn --> "2" Player
+    Player --> Board
+    Player o-- Goal
+    Player --> Color
+    Goal <|-- Horizontal
+    Goal <|-- Vertical
+    Goal <|-- Diagonal
+    Goal ..> "4" Put
+    Put ..> Token
+    Square o-- "0..1" Token 
+    Token *-- Color
+@enduml

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add global styles to this file, and also import other style files */
+
+@layer components {
+  .btn__action {
+    @apply bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full text-xl shadow-lg transform transition hover:scale-105;
+  }
+
+  .token {
+    @apply w-8 h-8  rounded-full shadow-inner;
+  }
+}

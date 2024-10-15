@@ -1,0 +1,9 @@
+@startuml Connect4
+state GAME_OVER
+state 1 as " "
+
+GAME_OVER --> 1 : Jugador solicita volver a jugar
+1 --> IN_GAME : Sistema muestra una nueva partida
+
+
+@enduml

@@ -26,6 +26,7 @@ import { TimeComponent } from './components/time/time.component';
   templateUrl: './chat.component.html',
 })
 export class ChatComponent {
+  zz;
   public readonly store = inject(ChatStore);
   public readonly value = new FormControl('', [Validators.required]);
 

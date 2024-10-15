@@ -1,0 +1,29 @@
+<section class="flex flex-col items-center justify-center min-h-screen">
+  <header class="text-center">
+    <app-hero-view></app-hero-view>
+  </header>
+  <div class="bg-blue-600 p-8 rounded-lg shadow-lg mb-8">
+    <div class="grid grid-cols-7 gap-2">
+      @for(i of [].constructor(18); track $index){
+      <div class="token bg-white"></div>
+      } @for(i of [].constructor(3); track $index){
+      <div class="token bg-red-500"></div>
+      } @for(i of [].constructor(3); track $index){
+      <div class="token bg-red-500"></div>
+      } @for(i of [].constructor(3); track $index){
+      <div class="token bg-yellow-500"></div>
+      } @for(i of [].constructor(3); track $index){
+      <div class="token bg-yellow-500"></div>
+      } @for(i of [].constructor(3); track $index){
+      <div class="token bg-red-500"></div>
+      } @for(i of [].constructor(3); track $index){
+      <div class="token bg-yellow-500"></div>
+      } @for(i of [].constructor(3); track $index){
+      <div class="token bg-red-500"></div>
+      } @for(i of [].constructor(3); track $index){
+      <div class="token bg-yellow-500"></div>
+      }
+    </div>
+  </div>
+  <ng-content></ng-content>
+</section>

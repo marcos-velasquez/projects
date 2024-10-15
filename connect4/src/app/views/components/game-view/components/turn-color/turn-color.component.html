@@ -1,0 +1,6 @@
+<div class="flex justify-center items-center mb-8">
+  <span
+    class="token w-16 h-16"
+    [ngClass]="{ 'bg-red-500': connect4().isTurn.red(), 'bg-yellow-500': connect4().isTurn.yellow() }"
+  ></span>
+</div>

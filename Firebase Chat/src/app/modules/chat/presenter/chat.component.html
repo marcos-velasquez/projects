@@ -16,10 +16,13 @@
   <div class="flex items-center p-4">
     <div class="w-full">
       <textarea
+        #autosize="cdkTextareaAutosize"
         cdkTextareaAutosize
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="5"
         (keydown.enter)="$event.preventDefault(); send()"
         [formControl]="value"
-        class="w-full textarea textarea-primary resize-none max-h-64"
+        class="w-full textarea textarea-primary"
       ></textarea>
     </div>
     <div class="my-px ml-4 flex h-11 items-center">

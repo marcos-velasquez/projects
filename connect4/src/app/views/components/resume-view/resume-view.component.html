@@ -1,0 +1,11 @@
+<app-cover-view>
+  <div class="flex justify-center items-center gap-3 mb-8">
+    <span class="text-2xl text-gray-200">Winner: </span>
+    <span
+      class="token"
+      [ngClass]="{ 'bg-red-500': connect4().isTurn.red(), 'bg-yellow-500': connect4().isTurn.yellow() }"
+    ></span>
+  </div>
+
+  <button (click)="connect4().resume()" class="btn__action">RESTART</button>
+</app-cover-view>

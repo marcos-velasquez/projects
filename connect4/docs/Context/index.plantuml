@@ -1,0 +1,10 @@
+@startuml Connect4
+
+
+[*] --> INITIAL
+INITIAL --> IN_GAME : start
+IN_GAME --> IN_GAME : putToken
+IN_GAME --> GAME_OVER : isConnect4
+GAME_OVER --> IN_GAME : resume
+GAME_OVER --> [*]
+@enduml

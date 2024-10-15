@@ -1,0 +1,19 @@
+@startuml Connect4
+state IN_GAME
+state C <<choice>>
+state P <<choice>>
+state 1 as " "
+state 2 as " "
+state 3 as " "
+state 4 as " "
+
+IN_GAME --> 1 : Jugador solicita poner una ficha
+1 --> 2 : Sitema permite seleccionar casilla
+2 --> 3 : Jugador selecciona la casilla
+3 --> P 
+P --> IN_GAME : Casilla no disponible
+P --> C : Casilla disponible
+C --> GAME_OVER : Jugador ha ganado
+C --> 4 : Jugador no ha ganado
+4 --> IN_GAME : Sistema cambia el turno
+@enduml

@@ -1,0 +1,19 @@
+<section class="flex flex-col items-center justify-center min-h-screen">
+  <header class="text-center">
+    <app-hero-view></app-hero-view>
+    <app-turn-color [connect4]="connect4()"></app-turn-color>
+  </header>
+  <div class="bg-blue-600 p-8 rounded-lg shadow-lg mb-8">
+    <div class="grid gap-2" [class]="'grid-cols-' + COLUMNS">
+      @for(_ of [].constructor(ROWS); track $index; let row = $index){ @for(_ of [].constructor(COLUMNS); track $index;
+      let column = $index){
+      <app-token
+        (click)="connect4().putToken(column)"
+        [connect4]="connect4()"
+        [column]="column"
+        [row]="row"
+      ></app-token>
+      } }
+    </div>
+  </div>
+</section>
