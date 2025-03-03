@@ -1,0 +1,56 @@
+<main class="h-screen w-screen flex items-center justify-center">
+  <section cdkDropListGroup id="tierMaker" class="w-3xl">
+    <header class="max-w-4xl mx-auto flex-1">
+      <input
+        [(ngModel)]="tierMakerFacade().get.title.value"
+        class="text-xl font-semibold mb-1 focus:outline-0 w-full"
+      />
+    </header>
+
+    <article class="flex flex-col gap-3 bg-gray-950 rounded-xl p-3">
+      @for(tier of tierMakerFacade().get.tiers; track tier.title){
+      <section class="grid grid-cols-[auto_1fr]">
+        <aside
+          class="bg-red-500 font-bold text-3xl rounded-l-2xl min-h-14 h-full w-16 flex items-center justify-center font-display"
+        >
+          {{ tier.title }}
+        </aside>
+        <div
+          cdkDropList
+          (cdkDropListDropped)="drop($event)"
+          [cdkDropListData]="tier.values"
+          cdkDropListOrientation="mixed"
+          class="flex flex-wrap rounded-r-2xl bg-[#252525]"
+        >
+          @for (element of tier.values; track $index) {
+          <img cdkDrag [src]="element.url" alt="element" class="h-14 object-cover" />
+          }
+        </div>
+      </section>
+      }
+
+      <section
+        cdkDropList
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListData]="tierMakerFacade().get.elements"
+        cdkDropListOrientation="mixed"
+        class="h-40 flex flex-wrap bg-[#252525] rounded-2xl overflow-auto"
+      >
+        @for(element of tierMakerFacade().get.elements; track element.url){
+        <img
+          cdkDrag
+          [src]="element.url"
+          alt="element"
+          class="h-14 object-cover hover:scale-105 transition-transform cursor-grab"
+        />
+        }
+      </section>
+
+      <section class="h-12 w-64 mx-auto bg-[#252525] rounded-2xl flex items-center justify-center gap-2">
+        <app-insert-element></app-insert-element>
+        <app-refresh></app-refresh>
+        <app-download></app-download>
+      </section>
+    </article>
+  </section>
+</main>

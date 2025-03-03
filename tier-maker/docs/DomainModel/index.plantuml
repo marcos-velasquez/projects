@@ -1,0 +1,17 @@
+@startuml DomainModel
+
+class TierMaker {}
+class TierList {}
+class Tier {}
+class Element {}
+class ElementList {}
+
+TierMaker *-- TierList 
+TierMaker *-- ElementList 
+
+TierList o-- "(S,A,B,C,D,E,F)" Tier 
+ElementList o-- "*" Element
+
+ElementList <|-- Tier
+
+@enduml

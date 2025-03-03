@@ -1,0 +1,21 @@
+@startuml DownloadUseCase
+
+state INITIAL as "OPENED_TIER_MAKER"
+state END as "OPENED_TIER_MAKER"
+state 1 as " "
+state 2 as " "
+
+
+INITIAL --> 1 
+note on link
+Usuario solicita descargar el TierMaker
+end note
+
+1 --> 2 
+note on link
+ Sistema descargar el TierMaker en formato PNG.
+end note
+
+2 -down-> END 
+
+@enduml

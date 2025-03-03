@@ -1,0 +1,26 @@
+@startuml ChangeTitleUseCase
+
+state INITIAL as "OPENED_TIER_MAKER"
+state END as "OPENED_TIER_MAKER"
+state 1 as " "
+state 2 as " "
+
+
+INITIAL --> 1 
+note on link
+Usuario solicita cambiar el titulo del TierList
+end note
+
+1 --> 2 
+note on link
+ <b>Sistema permite</b>
+ * Introducir el nuevo titulo
+end note
+
+2 -down-> END 
+note on link
+Sistema muestra el titulo actualizado
+end note 
+
+
+@enduml

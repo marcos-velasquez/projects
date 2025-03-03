@@ -1,0 +1,18 @@
+@startuml UseCases
+left to right direction
+
+
+Package TierMaker {
+     (ChangeTitle)
+     (InsertElement)
+     (MoveElement)
+     (Reset)
+     (Download)
+}
+
+ :User: --> (ChangeTitle)
+ :User: --> (InsertElement)
+ :User: --> (MoveElement)
+ :User: --> (Reset)
+ :User: --> (Download)
+@enduml

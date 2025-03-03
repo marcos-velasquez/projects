@@ -1,0 +1,23 @@
+@startuml MoveElementUseCase
+
+state INITIAL as "OPENED_TIER_MAKER"
+state END as "OPENED_TIER_MAKER"
+state 1 as " "
+state 2 as " "
+
+
+INITIAL --> 1 
+note on link
+Usuario solicita mover un elemento.
+end note
+
+1 --> 2 
+note on link
+ <b>Sistema permite</b>
+ * Mover un elemento dentro del mismo listado y ordenarlo.
+ * Mover un elemento a otro listado y ordenarlo.
+end note
+
+2 -down-> END 
+
+@enduml

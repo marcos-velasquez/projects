@@ -1,0 +1,35 @@
+@startuml InsertElementUseCase
+
+state INITIAL as "OPENED_TIER_MAKER"
+state END as "OPENED_TIER_MAKER"
+state C <<choice>>
+state 1 as " "
+state 2 as " "
+
+
+INITIAL --> 1 
+note on link
+Usuario solicita insertar un elemento en el listado de elementos
+end note
+
+1 --> 2 
+note on link
+ <b>Sistema permite</b>
+ * Seleccionar 1..n imágenes locales
+end note
+
+2 --> C 
+
+
+C -down[#red]-> 1
+note on link
+Archivo Invalido
+end note 
+
+C -down-> END 
+note on link
+Sistema muestra el listado de elementos actualizado
+end note 
+
+
+@enduml

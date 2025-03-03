@@ -1,0 +1,23 @@
+@startuml ResetUseCase
+
+state INITIAL as "OPENED_TIER_MAKER"
+state END as "OPENED_TIER_MAKER"
+state 1 as " "
+state 2 as " "
+
+
+INITIAL --> 1 
+note on link
+Usuario solicita resetear el TierMaker
+end note
+
+1 --> 2 
+note on link
+ <b>Sistema</b>
+ * Muestra el titulo por defecto.
+ * Borra los elementos del listado de elementos y niveles.
+end note
+
+2 -down-> END 
+
+@enduml
